@@ -22,7 +22,7 @@ export default function App() {
   const travelerInfo = {
     name: "鄧欣佩 HSIN PEI",
     email: "a111182116@nkust.edu.tw",
-    location: "高雄, 台灣",
+    location: "南投, 台灣",
     education: {
       school: "國立高雄科技大學",
       department: "航海技術系 / 五專部"
@@ -50,7 +50,7 @@ export default function App() {
         { title: "Day 3: 金三角之旅", content: "前往泰緬老三國交界。" },
         { title: "Day 4: 跨境大其力", content: "辦理過境手續。" },
         { title: "Day 5: 邊界探索", content: "大其力大金塔。" },
-        { title: "Day 6: 返回高雄", content: "經由泰國轉機返台。" }
+        { title: "Day 6: 返回南投", content: "經由泰國轉機返台。" }
       ]
     }
   };
