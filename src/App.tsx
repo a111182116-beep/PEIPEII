@@ -57,6 +57,65 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-avocado-50 text-avocado-900 font-sans">
+      {/* Decorative Avocado Elements */}
+      <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
+        <motion.div 
+          animate={{ 
+            y: [0, -20, 0],
+            rotate: [0, 5, 0]
+          }}
+          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute top-[15%] -left-12 w-48 h-64 bg-avocado-200/30 rounded-[100%_100%_60%_60%] rotate-[-15deg] blur-2xl"
+        >
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-avocado-400/20 rounded-full blur-xl" />
+        </motion.div>
+
+        <motion.div 
+          animate={{ 
+            y: [0, 30, 0],
+            rotate: [0, -8, 0]
+          }}
+          transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+          className="absolute top-[60%] -right-16 w-64 h-80 bg-avocado-300/20 rounded-[100%_100%_60%_60%] rotate-[20deg] blur-3xl"
+        >
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-avocado-500/10 rounded-full blur-2xl" />
+        </motion.div>
+
+        <motion.div 
+          animate={{ 
+            scale: [1, 1.1, 1],
+            opacity: [0.1, 0.2, 0.1]
+          }}
+          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute bottom-[5%] left-[20%] w-32 h-32 bg-avocado-400/10 rounded-full blur-3xl text-9xl leading-none flex items-center justify-center opacity-10"
+        >
+          🥑
+        </motion.div>
+
+        {/* Scattered small avocados */}
+        {[
+          { top: '25%', left: '85%', delay: 0 },
+          { top: '45%', left: '10%', delay: 2 },
+          { top: '75%', left: '90%', delay: 4 },
+          { top: '85%', left: '15%', delay: 1 },
+          { top: '10%', left: '40%', delay: 3 },
+        ].map((pos, i) => (
+          <motion.div
+            key={i}
+            initial={{ opacity: 0 }}
+            animate={{ 
+              opacity: [0.05, 0.15, 0.05],
+              y: [0, 10, 0]
+            }}
+            transition={{ duration: 8, repeat: Infinity, delay: pos.delay }}
+            style={{ top: pos.top, left: pos.left }}
+            className="absolute text-4xl select-none"
+          >
+            🥑
+          </motion.div>
+        ))}
+      </div>
+
       {/* Navigation */}
       <nav className="border-b border-avocado-200 sticky top-0 bg-avocado-50/80 backdrop-blur-md z-50">
         <div className="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
